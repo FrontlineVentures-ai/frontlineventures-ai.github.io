@@ -42,16 +42,7 @@
       justify-content: space-between;
       padding: 0 2.5rem;
     }
-    .nav-logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
-    .nav-wordmark {
-      font-family: 'DM Sans', sans-serif;
-      font-weight: 700;
-      font-size: 11.5px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      line-height: 1.35;
-      color: var(--green);
-    }
+    .nav-logo { display: flex; align-items: center; text-decoration: none; }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
       font-size: 12.5px;
@@ -176,4 +167,285 @@
       display: inline-block;
       font-size: 9.5px;
       letter-spacing: 0.18em;
-      text-transform:
+      text-transform: uppercase;
+      color: var(--green);
+      background: var(--cream-dark);
+      padding: 3px 8px;
+      margin-bottom: 0.85rem;
+    }
+    .proof-block h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: var(--green);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      line-height: 1.25;
+    }
+    .proof-block p { font-size: 0.88rem; font-weight: 300; color: var(--text-muted); line-height: 1.6; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 3.5rem;
+      margin-top: 2.5rem;
+      align-items: start;
+    }
+    .about-photo img { width: 100%; display: block; filter: grayscale(12%); }
+    .about-photo-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--green);
+      margin-top: 0.85rem;
+    }
+    .about-photo-title {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+    .about-text p { font-size: 0.95rem; font-weight: 300; line-height: 1.75; color: var(--text-muted); }
+    .about-text p + p { margin-top: 1rem; }
+    #contact { background: var(--green); }
+    #contact .section-label { color: rgba(236,232,223,0.4); }
+    .contact-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 500;
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 2rem;
+    }
+    .contact-email {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--cream);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      border-bottom: 1px solid rgba(236,232,223,0.35);
+      padding-bottom: 2px;
+      transition: border-color 0.2s, opacity 0.2s;
+    }
+    .contact-email:hover { border-color: var(--cream); opacity: 0.8; }
+    .contact-note {
+      margin-top: 1.25rem;
+      font-size: 0.82rem;
+      color: rgba(236,232,223,0.4);
+      font-weight: 300;
+    }
+    footer {
+      background: var(--cream);
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer p { font-size: 11.5px; color: var(--text-muted); letter-spacing: 0.04em; }
+    .fade { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .fade.up { opacity: 1; transform: translateY(0); }
+    @media (max-width: 700px) {
+      nav { padding: 0 1.25rem; }
+      .container { padding: 0 1.25rem; }
+      .nav-links { display: none; }
+      .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .cap-grid, .proof-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+      .about-photo img { max-width: 180px; }
+      .process-row { grid-template-columns: 60px 1fr; gap: 1.25rem; }
+      footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <img src="logo.jpg" alt="Frontline Ventures" style="height:44px;">
+  </a>
+  <ul class="nav-links">
+    <li><a href="#capabilities">Capabilities</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="hero">
+  <div class="container">
+    <div class="hero-brand fade" style="margin-bottom:3rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border)">
+      <img src="logo.jpg" alt="Frontline Ventures" style="height:140px;">
+    </div>
+    <div class="hero-inner">
+      <div>
+        <p class="section-label fade">Strategic Services Provider · Oxford, England</p>
+        <h1 class="hero-headline fade">Business<br>Operating<br>Intelligence.</h1>
+        <p class="hero-sub fade">Frontline Ventures provides organisations with the business intelligence they need to grow their market share — knowing their customers, their competitors, and the procurement landscape they are competing in.</p>
+      </div>
+      <div class="hero-aside fade">
+        <div class="hero-stat">
+          <p class="hero-stat-label">Markets</p>
+          <p class="hero-stat-val">UK and North America — US &amp; Canada</p>
+        </div>
+        <div class="hero-stat">
+          <p class="hero-stat-label">Client focus</p>
+          <p class="hero-stat-val">SMEs and Tier 2–3 supplier chains</p>
+        </div>
+        <div class="hero-stat">
+          <p class="hero-stat-label">Approach</p>
+          <p class="hero-stat-val">Intelligence-led. Agentic AI-powered.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="capabilities">
+  <div class="container">
+    <p class="section-label fade">What we do</p>
+    <h2 class="fade" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:500;line-height:1.1;color:var(--cream)">Two services.<br>One operating intelligence.</h2>
+    <div class="cap-grid fade">
+      <div class="cap-block">
+        <p class="cap-num">01</p>
+        <h3>Market growth diagnosis</h3>
+        <p>A structured assessment of where your growth opportunity actually lies. We analyse your current market position, identify the customers and segments with the highest potential, and map the competitive and procurement landscape — producing a clear diagnosis and a prioritised plan for growing share. Designed for SMEs and Tier 2–3 suppliers operating in complex, multi-stakeholder markets.</p>
+      </div>
+      <div class="cap-block">
+        <p class="cap-num">02</p>
+        <h3>Agentic AI commercial intelligence</h3>
+        <p>We build and operate AI-powered systems that continuously track procurement pipelines, score opportunities against your capability profile, and identify the named individuals who influence specification and buying decisions. Intelligence that works around the clock, not episodically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <p class="section-label fade">How we work</p>
+    <h2 class="fade" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:500;line-height:1.1;color:var(--green)">Structured<br>from the outset.</h2>
+    <div style="margin-top:3rem">
+      <div class="process-row fade">
+        <span class="process-num">01</span>
+        <div>
+          <h3>Understand</h3>
+          <p>A structured capability and market audit. We establish where your strengths lie, where the market opportunity sits, and what intelligence you need to act on it with confidence.</p>
+        </div>
+      </div>
+      <div class="process-row fade">
+        <span class="process-num">02</span>
+        <div>
+          <h3>Build</h3>
+          <p>We design and deploy the right instrument for your context — a commercial intelligence system, a growth diagnosis, or a stakeholder engagement framework.</p>
+        </div>
+      </div>
+      <div class="process-row fade">
+        <span class="process-num">03</span>
+        <div>
+          <h3>Run</h3>
+          <p>Ongoing intelligence and advisory support. Markets move; your intelligence should move with them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="proof">
+  <div class="container">
+    <p class="section-label fade">In practice</p>
+    <h2 class="fade" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:500;line-height:1.1;color:var(--green)">Active deployments.</h2>
+    <div class="proof-grid fade">
+      <div class="proof-block">
+        <span class="proof-tag">Water Infrastructure</span>
+        <h3>Tier 2 supplier — UK water sector</h3>
+        <p>A three-agent commercial pipeline intelligence system deployed for a UK composite pipe manufacturer targeting the £104bn AMP8 infrastructure programme. Continuously scores procurement opportunities, surfaces Tier 2 supply chain entry points, and maps named individuals influencing specification and procurement decisions.</p>
+      </div>
+      <div class="proof-block">
+        <span class="proof-tag">Art Markets</span>
+        <h3>Market intelligence — international art markets</h3>
+        <p>An automated weekly intelligence agent monitoring global art market developments for a private client. Produces a structured analytical digest — domain-specific analysis rather than a news summary, updated continuously.</p>
+      </div>
+    </div>
+    <div style="margin-top:1px;background:var(--border)">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border)">
+        <div class="proof-block">
+          <span class="proof-tag">Rail Transport</span>
+          <h3 style="font-size:1.05rem">Framework opportunities and Tier 2–3 supply chain mapping across UK and North American rail infrastructure programmes.</h3>
+        </div>
+        <div class="proof-block">
+          <span class="proof-tag">Energy Transition</span>
+          <h3 style="font-size:1.05rem">Grid infrastructure, renewables procurement intelligence, and stakeholder mapping for suppliers entering the energy transition market.</h3>
+        </div>
+        <div class="proof-block">
+          <span class="proof-tag">Healthcare Infrastructure</span>
+          <h3 style="font-size:1.05rem">Capital programme tracking and NHS supply chain analysis for SME suppliers targeting public sector healthcare procurement.</h3>
+        </div>
+        <div class="proof-block">
+          <span class="proof-tag">Real Estate</span>
+          <h3 style="font-size:1.05rem">Development pipeline monitoring and commercial opportunity scoring for SMEs supplying into residential and commercial construction.</h3>
+        </div>
+        <div class="proof-block">
+          <span class="proof-tag">Art Markets</span>
+          <h3 style="font-size:1.05rem">Market intelligence and collector, dealer, and institutional network analysis for organisations operating in the international art market.</h3>
+        </div>
+        <div class="proof-block" style="background:var(--cream-dark);display:flex;align-items:center;justify-content:center;padding:2rem">
+          <p style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--text-muted);font-style:italic;text-align:center;line-height:1.5">Intelligence built<br>for your sector.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="about">
+  <div class="container">
+    <p class="section-label fade">About</p>
+    <h2 class="fade" style="font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:500;line-height:1.1;color:var(--green)">Pattern recognition<br>from first principles.</h2>
+    <div class="about-grid fade">
+      <div class="about-photo">
+        <img src="profile_pic.JPG" alt="Tim House">
+        <p class="about-photo-name">Tim House</p>
+        <p class="about-photo-title">MD · Frontline Ventures</p>
+      </div>
+      <div class="about-text">
+        <p>Tim House held senior advisory roles at BDO and ICG, working with corporate clients on ESG strategy and sustainability across multiple sectors. Before moving into consulting, he served at UN Headquarters in New York, coordinating international peacekeeping operations spanning multiple theatres and coalition partners.</p>
+        <p>His earlier career in the British Army included operational tours in Afghanistan, senior command and staff appointments, and he was one of the lead negotiators for an Anglo-Canadian defence treaty. He has also served as a Non-Executive Director of the Global Bioethics Initiative, a New York-based international organisation.</p>
+        <p>Frontline Ventures operates at the intersection of strategic advisory and applied AI — building intelligence systems and market growth programmes for SMEs and Tier 2–3 suppliers with serious ambitions in UK and North American markets.</p>
+        <p>The firm's competitive advantage is not the technology alone. It is the ability to construct the right question, point the system at the right problem, and translate the output into a decision.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <p class="section-label fade">Contact</p>
+    <h2 class="contact-headline fade">Start with<br>a conversation.</h2>
+    <a href="mailto:tim.house@frontlineventures.co.uk" class="contact-email fade">tim.house@frontlineventures.co.uk</a>
+    <p class="contact-note fade">Oxford, England &nbsp;·&nbsp; Frontline Ventures Ltd</p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 Frontline Ventures Ltd</p>
+  <p>Oxford, England</p>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('up');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
